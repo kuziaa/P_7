@@ -9,7 +9,6 @@ def censor(forbidden, substitution):
         return decorated_fn
     return decorator
 
-
 @censor(forbidden=("ipsum", "quis"), substitution="[CENSORED]")
 def text_producer():
     return """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -18,7 +17,4 @@ def text_producer():
     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
     deserunt mollit anim id est laborum."""
 
- 
-
-c = text_producer()
-print(c)
+print(text_producer())
