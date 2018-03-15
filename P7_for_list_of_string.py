@@ -1,6 +1,7 @@
 def censor(forbidden, substitution):
     def decorator(fn):
         def decorated_fn():
+            # function for map
             def change_text(text):
                 for forbidden_frase in forbidden:
                     while text.find(forbidden_frase) != -1:
